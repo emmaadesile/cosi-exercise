@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import PageRoutes from './pages';
+
+const StyledWrapper = styled.div`
+  min-height: 90vh;
+  margin: 0 auto;
+  max-width: 20%;
+  display: grid;
+  place-items: center;
+
+  @media (max-width: 420px) {
+    max-width: 90%;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 30%;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 25%;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledWrapper>
+      <PageRoutes />
+    </StyledWrapper>
   );
 }
 
